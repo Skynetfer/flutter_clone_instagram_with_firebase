@@ -1,4 +1,4 @@
-# flutter_clone_intagram
+# flutter_clone_instagram
 
 A new Flutter project.
 
