@@ -35,6 +35,16 @@ dependencies:
   cloud_firestore: ^2.5.2
   firebase_storage: ^10.0.3
 
+  enum_to_string: ^2.0.1
+  equatable: ^2.0.3
+  flutter_bloc: ^7.2.0
+  image_cropper: ^1.4.1
+  image_picker: ^0.8.4
+
+  intl: ^0.17.0
+  timeago: ^3.1.0
+  uuid: ^3.0.4
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
