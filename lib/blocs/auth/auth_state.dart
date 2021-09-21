@@ -20,11 +20,10 @@ class AuthState extends Equatable {
       const AuthState(status: AuthStatus.unauthenticated);
 
   @override
-  // TODO: implement stringify
   bool? get stringify => true;
 
   @override
-  List<Object> get props => [user!, status];
+  List<Object> get props => [user != null, status];
 }
 
 // class AuthInitial extends AuthState {}
