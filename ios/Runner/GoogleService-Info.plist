@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>253316751038-vaoqssl4hgl4tupe5cvisnro5i9aq243.apps.googleusercontent.com</string>
+	<string>896363494192-39097834asokkestivblmacivafaja1j.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.253316751038-vaoqssl4hgl4tupe5cvisnro5i9aq243</string>
+	<string>com.googleusercontent.apps.896363494192-39097834asokkestivblmacivafaja1j</string>
 	<key>API_KEY</key>
-	<string>AIzaSyCmEum8pFt4uQ1nfmZy8QNXDQ_5lZ-vmVY</string>
+	<string>AIzaSyCrUqBKCW0Lo3e8rJ7VvxcL-d3VzA2mD9Q</string>
 	<key>GCM_SENDER_ID</key>
-	<string>253316751038</string>
+	<string>896363494192</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.example.flutterCloneIntagram</string>
 	<key>PROJECT_ID</key>
-	<string>fir-57a0e</string>
+	<string>flutter-instagram-clone-dcb44</string>
 	<key>STORAGE_BUCKET</key>
-	<string>fir-57a0e.appspot.com</string>
+	<string>flutter-instagram-clone-dcb44.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,6 +29,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:253316751038:ios:73a24c80ca0d4e84cec8ef</string>
+	<string>1:896363494192:ios:63503a5e639f8d94cba6f5</string>
+	<key>DATABASE_URL</key>
+	<string>https://flutter-instagram-clone-dcb44.firebaseio.com</string>
 </dict>
 </plist>

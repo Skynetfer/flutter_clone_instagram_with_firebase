@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_clone_intagram/blocs/auth/auth_bloc.dart';
 import 'package:flutter_clone_intagram/screens/nav/nav_screen.dart';
 import 'package:flutter_clone_intagram/screens/signIn/sign_in_screen.dart';
+import 'package:flutter_clone_intagram/screens/signup/sign_up_screen.dart';
 
 class SplashScreen extends StatelessWidget {
   static const String routeName = '/splash';

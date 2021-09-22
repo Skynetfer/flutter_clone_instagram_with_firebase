@@ -9,7 +9,7 @@ part 'auth_state.dart';
 
 class AuthBloc extends Bloc<AuthEvent, AuthState> {
   final AuthRepository _authRepository;
-  late StreamSubscription<auth.User?> _userSubscription;
+  late final StreamSubscription<auth.User?> _userSubscription;
   AuthBloc({
     required AuthRepository authRepository,
   })  : _authRepository = authRepository,
@@ -36,8 +36,8 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
   }
 
   Stream<AuthState> _mapAuthUserChangedToState(AuthUserChanged event) async* {
-    yield event.user == null
-        ? AuthState.authenticated(user: event.user)
+    yield event.user != null
+        ? AuthState.authenticated(user: event.user!)
         : AuthState.unauthenticated();
   }
 }
