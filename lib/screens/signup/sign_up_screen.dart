@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_clone_intagram/repositories/auth/auth_repository.dart';
 import 'package:flutter_clone_intagram/screens/signup/cubit/sign_up_cubit.dart';
+import 'package:flutter_clone_intagram/widgets/widgets.dart';
 
 class SignUpScreen extends StatelessWidget {
   static const String routeName = "/signup";
@@ -32,9 +33,8 @@ class SignUpScreen extends StatelessWidget {
             if (state.status == SignUpStatus.error) {
               showDialog(
                 context: context,
-                builder: (context) => AlertDialog(
-                  title: Text("Error"),
-                  content: Text(state.failure.message),
+                builder: (context) => ErrorDialog(
+                  content: state.failure.message,
                 ),
               );
             }

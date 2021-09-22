@@ -1,9 +1,9 @@
-
-
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_clone_intagram/repositories/auth/auth_repository.dart';
 import 'package:flutter_clone_intagram/screens/signup/sign_up_screen.dart';
+import 'package:flutter_clone_intagram/widgets/widgets.dart';
 
 import 'cubit/sign_in_cubit.dart';
 
@@ -36,10 +36,8 @@ class SignInScreen extends StatelessWidget {
             if (state.status == SignInStatus.error) {
               showDialog(
                 context: context,
-                builder: (context) => AlertDialog(
-                  title: Text("Error"),
-                  content: Text(state.failure.message),
-                ),
+                builder: (context) =>
+                    ErrorDialog(content: state.failure.message),
               );
             }
           },
@@ -117,8 +115,8 @@ class SignInScreen extends StatelessWidget {
                               ),
                             ),
                             ElevatedButton(
-                              onPressed: () =>
-                                  Navigator.of(context).pushNamed(SignUpScreen.routeName),
+                              onPressed: () => Navigator.of(context)
+                                  .pushNamed(SignUpScreen.routeName),
                               child: Text(
                                 "No account? Sign up",
                                 style: TextStyle(

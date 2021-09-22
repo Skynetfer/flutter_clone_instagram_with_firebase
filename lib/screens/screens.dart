@@ -2,3 +2,8 @@ export 'splash/splash_screen.dart';
 export 'nav/nav_screen.dart';
 export 'signin/sign_in_screen.dart';
 export 'signup/sign_up_screen.dart';
+export 'create_post/create_post_screen.dart';
+export 'feed/feed_screen.dart';
+export 'notifications/notifications_screen.dart';
+export 'profile/profile_screen.dart';
+export 'search/search_Screen.dart';
