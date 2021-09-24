@@ -3,6 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_clone_intagram/blocs/auth/auth_bloc.dart';
 import 'package:flutter_clone_intagram/config/router.dart';
 import 'package:flutter_clone_intagram/enums/enums.dart';
+import 'package:flutter_clone_intagram/repositories/repositories.dart';
+import 'package:flutter_clone_intagram/screens/profile/bloc/profile_bloc.dart';
 import 'package:flutter_clone_intagram/screens/screens.dart';
 
 class TabNavigator extends StatelessWidget {
@@ -31,7 +33,7 @@ class TabNavigator extends StatelessWidget {
           )
         ];
       },
-       onGenerateRoute: CustomRouter.onGenerateNestedRoute,
+      onGenerateRoute: CustomRouter.onGenerateNestedRoute,
     );
   }
 
@@ -50,7 +52,15 @@ class TabNavigator extends StatelessWidget {
       case BottomNavItems.notification:
         return NotificationsScreen();
       case BottomNavItems.profile:
-        return ProfileScreen();
+        return BlocProvider<ProfileBloc>(
+          create: (_) => ProfileBloc(
+            userRepository: context.read<UserRepository>(),
+            authBloc: context.read<AuthBloc>(),
+          )..add(
+              ProfileLoadUser(userId: context.read<AuthBloc>().state.user!.uid),
+            ),
+          child: ProfileScreen(),
+        );
       default:
         return Scaffold();
     }

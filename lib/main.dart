@@ -7,6 +7,7 @@ import 'package:flutter_clone_intagram/blocs/auth/auth_bloc.dart';
 import 'package:flutter_clone_intagram/blocs/simple_bloc_observer.dart';
 import 'package:flutter_clone_intagram/config/router.dart';
 import 'package:flutter_clone_intagram/repositories/auth/auth_repository.dart';
+import 'package:flutter_clone_intagram/repositories/repositories.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -27,6 +28,9 @@ class MyApp extends StatelessWidget {
       providers: [
         RepositoryProvider<AuthRepository>(
           create: (_) => AuthRepository(),
+        ),
+        RepositoryProvider<UserRepository>(
+          create: (_) => UserRepository(),
         ),
       ],
       child: MultiBlocProvider(
